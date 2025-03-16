@@ -1,0 +1,62 @@
+> admin 
+
+GET : api/users - list of users - get
+DELETE: api/users/:id - delete
+
+POST : api/author - add new user {name, biography, dateofbirth, nationality}
+
+PATCH api/authors/:id - author info  { name, biography, dateofbirth, nationality}
+
+DELETE api/authors/:id 
+
+POST api/books - {title, ISBN, summary, publicationdate, genres, copies, authorid}
+
+PATCH - api/books/:id - {title, ISBN, summary, publicationdate, 
+
+DELETE- api/books/:id
+
+GET - api/borrowings  - list of transactions
+
+
+
+
+> user
+api/borrowings - borrow a book 
+request body: {bookId} 
+ - decrease available copy
+ - create new borrowing transaction
+ - add book to user broowedbook list
+
+
+api/borrowings/my
+  - retrieve borrowing history
+ - returs list of transaction
+
+
+> USER and ADMIN- update 
+PATCH - api/users/:id -{name, email, password}
+PATCH - api/borrowings/:id/return
+	- return a borrowed book
+	- update return date and status
+	- increase copies available
+	- remove book from user
+
+
+
+
+
+
+#
+GET  api/authors - list of authors
+GET  api/authors/:id - authors details includes book
+
+ 
+GET : api/books - query parameters
+	author (author id)
+	genre
+	title (search by title)
+	page (pagination)
+	limit (pagination)
+
+GET: api/books/:id - particular book info
+
