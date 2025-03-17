@@ -17,7 +17,7 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await api.post("api/auth/login", user);
+      const { data } = await api.post("/api/auth/login", user);
       console.log("Response from server:", data);
 
       if (data.success && data.data.token) {
