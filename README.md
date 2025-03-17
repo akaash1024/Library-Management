@@ -16,7 +16,7 @@ A comprehensive RESTful API for managing a library system with user authenticati
 - [Authentication](#authentication-1)
 - [Setup & Installation](#setup--installation)
 - [Environment Variables](#environment-variables)
-- [Environment Variables](https://github.com/akaash1024/Library-Management/blob/main/LibraryManagement.postman_collection.json)
+- [Postman](https://github.com/akaash1024/Library-Management/blob/main/LibraryManagement.postman_collection.json)
 
 
 ## Overview
