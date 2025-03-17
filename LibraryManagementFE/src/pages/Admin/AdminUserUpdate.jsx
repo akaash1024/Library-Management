@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../../../AuthContextStore";
 
 export const AdminUserUpdate = () => {
-  const [userData, setUserData] = useState({}); // ✅ Fix 1: Initialize as an empty object
+  const [userData, setUserData] = useState({}); 
   const { id } = useParams();
   const { authorizationToken, api } = useAuth();
 

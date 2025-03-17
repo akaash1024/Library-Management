@@ -18,8 +18,7 @@ import { AdminUserUpdate } from "./pages/Admin/AdminUserUpdate";
 import { AdminAuthorAdd } from "./pages/Admin/AdminAuthorAdd";
 import { AdminAuthorUpdate } from "./pages/Admin/AdminAuthorUpdate";
 import { AdminBook } from "./pages/Admin/AdminBook";
-import { AdminBookAdd } from "./pages/Admin/AdminBookAdd";
-import { AdminBookUpdate } from "./pages/Admin/AdminBookUpdate";
+
 import { AdminContacts } from "./pages/Admin/AdminContacts";
 import { BookDetails } from "./pages/BookDetails";
 
@@ -49,7 +48,6 @@ const route = createBrowserRouter([
           { path: "user/update/:id", element: <AdminUserUpdate /> },
 
           { path: "authors", element: <AdminAuthor /> },
-          { path: "author", element: <AdminAuthorAdd /> },
           { path: "author", element: <AdminAuthorUpdate /> },
 
           { path: "books", element: <AdminBook /> },
