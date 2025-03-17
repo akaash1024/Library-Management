@@ -15,12 +15,12 @@ import { AdminUser } from "./pages/Admin/AdminUser";
 import { AdminAuthor } from "./pages/Admin/AdminAuthor";
 import { AdminUserUpdate } from "./pages/Admin/AdminUserUpdate";
 
-import { AdminAuthorAdd } from "./pages/Admin/AdminAuthorAdd";
 import { AdminAuthorUpdate } from "./pages/Admin/AdminAuthorUpdate";
 import { AdminBook } from "./pages/Admin/AdminBook";
 
 import { AdminContacts } from "./pages/Admin/AdminContacts";
 import { BookDetails } from "./pages/BookDetails";
+import { AdminBookUpdate } from "./pages/Admin/AdminBookUpdate";
 
 // const { getBookDetails } = useAuth();
 
@@ -51,7 +51,6 @@ const route = createBrowserRouter([
           { path: "author", element: <AdminAuthorUpdate /> },
 
           { path: "books", element: <AdminBook /> },
-          { path: "book", element: <AdminBookAdd /> },
           { path: "book", element: <AdminBookUpdate /> },
 
           { path: "contacts", element: <AdminContacts /> },

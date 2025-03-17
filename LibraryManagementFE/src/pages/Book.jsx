@@ -25,7 +25,8 @@ export const Book = () => {
           return (
             <div className="card" key={ISBN || index}>
               <div className="card-img">
-                <img src="../../public/book.jpg" alt={`Cover of ${title}`} />
+                {/* <img src="../../public/book.jpg" alt={`Cover of ${title}`} /> */}
+                <img src="/book.jpg" alt={`Cover of ${title}`} />
               </div>
 
               <div className="card-details">
