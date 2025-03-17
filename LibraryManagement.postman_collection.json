@@ -1,0 +1,1290 @@
+{
+	"info": {
+		"_postman_id": "4c0a58f0-2fae-4a4d-8fd1-28756241304f",
+		"name": "LibraryManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37564071",
+		"_collection_link": "https://logn99.postman.co/workspace/Team-Workspace~9513deb8-6687-4d45-8b94-9cd7517f5271/collection/37564071-4c0a58f0-2fae-4a4d-8fd1-28756241304f?action=share&source=collection_link&creator=37564071"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abhay@gmail.com\",\r\n    \"name\": \"abhay\",\r\n    \"password\": \"abhay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/register",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abhay@gmail.com\",\r\n \r\n    \"password\": \"abhay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/login",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2ZDg1NDJkYTRlMTI2ODgwNmZmMjIiLCJlbWFpbCI6ImFiaGF5QGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDIxMzMzNjksImV4cCI6MTc0NDcyNTM2OX0.WNV78EhuoDRIE8Oqsi5Q50KRa_cn1big6NNl5ueI6eI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/user/67d6d8542da4e1268806ff22",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"user",
+								"67d6d8542da4e1268806ff22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2ZDg1NDJkYTRlMTI2ODgwNmZmMjIiLCJlbWFpbCI6ImFiaGF5QGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDIxMzMzNjksImV4cCI6MTc0NDcyNTM2OX0.WNV78EhuoDRIE8Oqsi5Q50KRa_cn1big6NNl5ueI6eI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isAdmin\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/user/67d6d8542da4e1268806ff22",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"user",
+								"67d6d8542da4e1268806ff22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2OTMyMjllZjg4OTE0OGMxNjkwNWIiLCJlbWFpbCI6InVwYXNhbmFCYUBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzQyMTE1ODUyLCJleHAiOjE3NDQ3MDc4NTJ9.3HgSviK74L-oUQOQ4vnsAYzkW1daBc2S8hclL0JXGZo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/user",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Get Authors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>ID</th>\r",
+									"        <th>Name</th>\r",
+									"        <th>Biography</th>\r",
+									"        <th>Date of Birth</th>\r",
+									"        <th>Nationality</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.author}}\r",
+									"        <tr>\r",
+									"            <td>{{_id}}</td>\r",
+									"            <td>{{name}}</td>\r",
+									"            <td>{{biography}}</td>\r",
+									"            <td>{{dateOfBirth}}</td>\r",
+									"            <td>{{nationality}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());\r",
+									"var template = `\r",
+									"<canvas id=\"myPieChart\" height=\"75\"></canvas>\r",
+									"\r",
+									"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js\"></script> \r",
+									"\r",
+									"<script>\r",
+									"    var ctx = document.getElementById(\"myPieChart\");\r",
+									"\r",
+									"    var myPieChart = new Chart(ctx, {\r",
+									"        type: \"pie\",\r",
+									"        data: {\r",
+									"            labels: [],\r",
+									"            datasets: [{\r",
+									"                data: [],\r",
+									"                \r",
+									"                // Change these colours to customize the chart\r",
+									"                backgroundColor: [\"#003f5c\", \"#58508d\", \"#bc5090\", \"#ff6361\", \"#ffa600\"],\r",
+									"            }]\r",
+									"        },\r",
+									"        options: {\r",
+									"            title: {\r",
+									"                display: true,\r",
+									"                text: 'Author Distribution'\r",
+									"            }\r",
+									"        }\r",
+									"\r",
+									"    });\r",
+									"\r",
+									"    // Access the data passed to pm.visualizer.set() from the JavaScript\r",
+									"    // code of the Visualizer template\r",
+									"    pm.getData(function (err, value) {\r",
+									"        myPieChart.data.labels = value.response.author.map(a => a.name);\r",
+									"        myPieChart.data.datasets[0].data = value.response.author.map(a => a.books.length);\r",
+									"        myPieChart.update();\r",
+									"    });\r",
+									"\r",
+									"</script>`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    var res = pm.response.json();\r",
+									"    \r",
+									"    var authorData = {\r",
+									"        author: res.author\r",
+									"    };\r",
+									"\r",
+									"    return { response: authorData };\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{authors}}/",
+							"host": [
+								"{{authors}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get author by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"akash@gmail.com\",\r\n    \"password\": \"akash\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{authors}}/67b228db8bafed0d86481329",
+							"host": [
+								"{{authors}}"
+							],
+							"path": [
+								"67b228db8bafed0d86481329"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Get Books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books}}/",
+							"host": [
+								"{{books}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get book by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{books}}/67b22b611361d566d15c80bc",
+							"host": [
+								"{{books}}"
+							],
+							"path": [
+								"67b22b611361d566d15c80bc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Boorowing",
+			"item": [
+				{
+					"name": "Borrow a book",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I0MjNiNGI3YzQzNTVjZDUxNThhOTciLCJlbWFpbCI6InBldGVyQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc0MjExODg4NSwiZXhwIjoxNzQ0NzEwODg1fQ.yf5XpvFL3rScrFMPTs1WZbcOY_qwfpoa-qxwH-jOInM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": \"67b22b901361d566d15c80c1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{borrowings}}/",
+							"host": [
+								"{{borrowings}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrowing selfBorrowedBooks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I0MjNiNGI3YzQzNTVjZDUxNThhOTciLCJlbWFpbCI6InBldGVyQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc0MjExODg4NSwiZXhwIjoxNzQ0NzEwODg1fQ.yf5XpvFL3rScrFMPTs1WZbcOY_qwfpoa-qxwH-jOInM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{borrowings}}/my",
+							"host": [
+								"{{borrowings}}"
+							],
+							"path": [
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I0MjNiNGI3YzQzNTVjZDUxNThhOTciLCJlbWFpbCI6InBldGVyQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc0MjExODg4NSwiZXhwIjoxNzQ0NzEwODg1fQ.yf5XpvFL3rScrFMPTs1WZbcOY_qwfpoa-qxwH-jOInM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": \"67b22d791361d566d15c80f6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{borrowings}}/67b22d791361d566d15c80f6/return",
+							"host": [
+								"{{borrowings}}"
+							],
+							"path": [
+								"67b22d791361d566d15c80f6",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"peter@gmail.com\",\r\n    \"password\": \"peter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/login",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "getAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2OTMyMjllZjg4OTE0OGMxNjkwNWIiLCJlbWFpbCI6InVwYXNhbmFCYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NDIxMjA1NTgsImV4cCI6MTc0NDcxMjU1OH0.W0ifqo4StffP1C_P_esjOmy1Drt3QBUjt52J6qxxOHI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{admin}}/users",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getbyId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2OTMyMjllZjg4OTE0OGMxNjkwNWIiLCJlbWFpbCI6InVwYXNhbmFCYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NDIxMjA1NTgsImV4cCI6MTc0NDcxMjU1OH0.W0ifqo4StffP1C_P_esjOmy1Drt3QBUjt52J6qxxOHI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{admin}}/user/67d693229ef889148c16905b",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"user",
+										"67d693229ef889148c16905b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebyId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2OTMyMjllZjg4OTE0OGMxNjkwNWIiLCJlbWFpbCI6InVwYXNhbmFCYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NDIxMjA1NTgsImV4cCI6MTc0NDcxMjU1OH0.W0ifqo4StffP1C_P_esjOmy1Drt3QBUjt52J6qxxOHI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isAdmin\": \"true\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/user/67d693229ef889148c16905b",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"user",
+										"67d693229ef889148c16905b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletebyId",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Q2OTMyMjllZjg4OTE0OGMxNjkwNWIiLCJlbWFpbCI6InVwYXNhbmFCYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3NDIxMjA1NTgsImV4cCI6MTc0NDcxMjU1OH0.W0ifqo4StffP1C_P_esjOmy1Drt3QBUjt52J6qxxOHI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/user/67d693229ef889148c16905b",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"user",
+										"67d693229ef889148c16905b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Author",
+					"item": [
+						{
+							"name": "Add Author",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Anya Volkov\",\r\n  \"biography\": \"Award-winning fantasy novelist and short story writer, known for intricate world-building and compelling characters.\",\r\n  \"dateOfBirth\": \"November 12, 1978\",\r\n  \"nationality\": \"Russian\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/author",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"author"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nationality\": \"Canadian\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/author/67d6a8b759709e04f929418f",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"author",
+										"67d6a8b759709e04f929418f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/author/67b2402e6ddf2d21a04964b6",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"author",
+										"67b2402e6ddf2d21a04964b6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "Add Book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n    \"title\": \"The Innovation Equation\",\r\n    \"ISBN\": \"978-2222222222\",\r\n    \"summary\": \"A guide to unlocking creativity and driving innovation.\",\r\n    \"publicationDate\": \"June 25, 2023\",\r\n    \"genres\": [\r\n      \"Business\",\r\n      \"Self-Help\"\r\n    ],\r\n    \"author\": \"67b229418bafed0d8648132c\" // Example ID\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/book",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Books",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/book",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Books by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/book/67b22b611361d566d15c80bc",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"book",
+										"67b22b611361d566d15c80bc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ISBN\": \"9601046613\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/book/67b22b611361d566d15c80bc",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"book",
+										"67b22b611361d566d15c80bc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/book/67b22d8d1361d566d15c80fb",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"book",
+										"67b22d8d1361d566d15c80fb"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Beare yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTczMzAwMCwiZXhwIjoxNzQyMzI1MDAwfQ.eFRxAZcgQ53XZY4Tnz-iPHpTUVpGgCUeyIHoPAZPLh0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{admin}}/contact",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"contact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete contact ",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Beare yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTczMzAwMCwiZXhwIjoxNzQyMzI1MDAwfQ.eFRxAZcgQ53XZY4Tnz-iPHpTUVpGgCUeyIHoPAZPLh0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{admin}}/contact/67b23a64ee4a65b78985164b",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"contact",
+										"67b23a64ee4a65b78985164b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "BorrowedBook",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTcyOTAyMiwiZXhwIjoxNzQyMzIxMDIyfQ.5RsffbVvXcjdMXdSHRqjG6kV6k0Y1OXdylc1Lsll26E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{admin}}/borrowings",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"borrowings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return creating adming",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2IyMjc1NzFjZGMyZDRjNjBhMTFlMWEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczOTczNTg3NywiZXhwIjoxNzQyMzI3ODc3fQ.4fpCHeMK0-W-G3LbGrTXUv-vyACa5sXmde5qA0F2_WY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\":\"67b22b611361d566d15c80bc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{admin}}/borrowings/67b22b611361d566d15c80bc/return",
+									"host": [
+										"{{admin}}"
+									],
+									"path": [
+										"borrowings",
+										"67b22b611361d566d15c80bc",
+										"return"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login - admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"upasanaBa@gmail.com\",\r\n    \"password\": \"upasanaBa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{auth}}/login",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
