@@ -25,7 +25,7 @@ adminRoute.route("/author").post(isAuthenicated, isAdmin, authorController.addNe
 
 // ? need to make this route for everyone one general rouutes while later on
 adminRoute.route("/author").get(isAuthenicated, isAdmin, authorController.getAllAuthor);
-adminRoute.route("/author").get(isAuthenicated, isAdmin, authorController.getAuthorById);
+adminRoute.route("/author/:id").get(isAuthenicated, isAdmin, authorController.getAuthorById);
 
 adminRoute.route("/author/:id").patch(isAuthenicated, isAdmin, authorController.updateAuthorById);
 adminRoute.route("/author/:id").delete(isAuthenicated, isAdmin, authorController.deleteAuthorById);
@@ -34,16 +34,16 @@ adminRoute.route("/author/:id").delete(isAuthenicated, isAdmin, authorController
 adminRoute.route("/book").post(isAuthenicated, isAdmin, bookController.addNewBook);
 
 // ? need to make this route for everyone one general rouutes while later on
-adminRoute.route("/book").get(isAuthenicated, isAdmin, bookController.getAllBook);
+adminRoute.route("/books").get(isAuthenicated, isAdmin, bookController.getAllBook);
 adminRoute.route("/book/:id").get(isAuthenicated, isAdmin, bookController.getBookById);
 
 adminRoute.route("/book/:id").patch(isAuthenicated, isAdmin, bookController.updateBookById);
 adminRoute.route("/book/:id").delete(isAuthenicated, isAdmin, bookController.deleteBookById);
 
 
-// !contactsP
+// !contacts
 adminRoute.route("/contacts").get(isAuthenicated, isAdmin, contactController.getAllContacts);
-adminRoute.route("/contacts").delete(isAuthenicated, isAdmin, contactController.deleteContactById);
+adminRoute.route("/contacts/:id").delete(isAuthenicated, isAdmin, contactController.deleteContactById);
 
 
 // ! borrowing books
