@@ -21,6 +21,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin-bottom: 10rem;
 }
 
 h1 {
@@ -66,6 +73,12 @@ li {
   -moz-text-decoration-color: var(--helper-color);
 }
 
+
+
+.flex {
+  display: flex;
+  gap:.5rem
+}
 /* Containers */
 .container {
   max-width: 900px;
@@ -150,31 +163,55 @@ textarea {
 
 /* Hero Section */
 .section-hero .hero-image img {
-  border-radius: 15%;
-  filter: drop-shadow(0 0 10px);
+  border-radius: 2rem;
 }
 
 /* Button Group */
 .btn {
-  margin: 0 0.5rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Secondary Button */
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
+}
+
+.secondary-btn:hover {
+  background-color: #545b62;
+}
+
+/* Button Group */
 .btn-group {
-  height: 40px;
-  width: 50%;
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Book Card */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -183,42 +220,90 @@ textarea {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
 .card-img img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 150px;
   object-fit: cover;
+  border-radius: 1rem;
 }
 
 .card-details {
+  flex-grow: 1;
   padding: 15px;
-}
-
-.book-title,
-.book-author,
-.book-summary {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .book-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .book-author {
+  font-size: 14px;
   color: #555;
+  text-align: center;
+  font-style: italic;
 }
 
-/* Book Card */
+.book-summary {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  text-align: justify;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket__buy-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ticket__buy-btn:hover {
+  background-color: var(--helper-color);
+}
+
+/* Book Details Card */
 .bookCardContainer {
   padding: 8px 0;
   display: flex;
@@ -323,4 +408,97 @@ textarea {
   .book-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/*  adming */
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+  background: var(--bg-color);
+  color: white;
+  font-size: 1.8rem;
+}
+
+.admin-table td {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+/* Alternate row background */
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 8px 15px;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.edit-btn {
+  background-color: var(--btn-color);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #00b040;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b71c26;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.6rem;
+  color: #666;
+}
+
+.adming-common--form {
+  position: fixed;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }

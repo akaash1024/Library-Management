@@ -48,7 +48,7 @@ const route = createBrowserRouter([
           { path: "user/update/:id", element: <AdminUserUpdate /> },
 
           { path: "authors", element: <AdminAuthor /> },
-          { path: "author", element: <AdminAuthorUpdate /> },
+          { path: "author/update/:id", element: <AdminAuthorUpdate /> },
 
           { path: "books", element: <AdminBook /> },
           { path: "book", element: <AdminBookUpdate /> },

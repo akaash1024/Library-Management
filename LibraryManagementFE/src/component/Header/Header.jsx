@@ -17,7 +17,7 @@ export const Header = () => {
         <ul>
           <li>
             <NavLink
-              to="/admin"
+              to="/admin/users"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Admin

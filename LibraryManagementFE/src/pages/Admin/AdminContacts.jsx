@@ -23,7 +23,7 @@ export const AdminContacts = () => {
   const deleteContactById = async (id) => {
     try {
       const response = await axios.delete(
-        `${API}/api/admin/contacts/delete/${id}`,
+        `${API}/api/admin/contacts/${id}`,
         {
           headers: {
             Authorization: authorizationToken,

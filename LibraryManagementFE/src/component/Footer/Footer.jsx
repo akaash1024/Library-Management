@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer>
       <p>
-        <Link to="https://github.com/akaash1024/">@akaash1024</Link>
+        <Link to="/">@Library Management </Link>
       </p>
     </footer>
   );

@@ -29,7 +29,7 @@ export const Register = () => {
     } catch (error) {
       console.error("Register error Akash testing:", error);
       toast.error(
-        "Failed to register. Please try again." || error.response?.data?.message
+        error.response?.data?.extraDetails || "Failed to register. Please try again." 
       );
     }
   };

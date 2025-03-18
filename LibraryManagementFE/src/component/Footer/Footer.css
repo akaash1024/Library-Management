@@ -1,6 +1,8 @@
 footer {
-  padding: 3.2rem;
+  padding: 1.8rem;
   text-align: center;
   background-color: var(--bg-color);
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
