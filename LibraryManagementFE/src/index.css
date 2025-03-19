@@ -40,6 +40,14 @@ h1 {
   /* margin-bottom: 20px; */
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
 p,
 li,
 label,
@@ -73,11 +81,11 @@ li {
   -moz-text-decoration-color: var(--helper-color);
 }
 
-
-
 .flex {
   display: flex;
-  gap:.5rem
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 /* Containers */
 .container {
@@ -205,10 +213,19 @@ textarea {
   margin-top: 20px;
 }
 
+.search-box {
+  max-width: 25rem;
+
+  & input {
+    margin: 0.5rem 0;
+  }
+}
+
 /* Book Card */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+
   gap: 2rem;
   padding: 2rem;
   max-width: 120rem;
@@ -355,6 +372,8 @@ textarea {
   line-height: 1.5;
 }
 
+/*  book sewarch */
+
 /* Contact & Authentication Sections */
 .contact-container,
 #login,
@@ -391,6 +410,7 @@ textarea {
 @media (max-width: 768px) {
   .book-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact-grid,
   .login-grid,
@@ -407,6 +427,7 @@ textarea {
 @media (max-width: 480px) {
   .book-grid {
     grid-template-columns: 1fr;
+    
   }
 }
 
